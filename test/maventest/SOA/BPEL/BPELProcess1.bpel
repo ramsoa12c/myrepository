@@ -69,6 +69,8 @@
 
     <!-- Receive input from requestor. (Note: This maps to operation defined in BPELProcess1.wsdl) -->
     <receive name="receiveInput" partnerLink="bpelprocess1_client" portType="client:BPELProcess1" operation="process" variable="inputVariable" createInstance="yes"/>
+    <empty name="Empty1"/>
+    <invoke name="Invoke1"/>
     <assign name="Assign1">
       <copy>
         <from>$inputVariable.payload/client:input + $inputVariable.payload/client:input</from>
